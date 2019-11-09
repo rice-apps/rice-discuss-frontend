@@ -9,7 +9,7 @@ function Uploads () {
 //     <Post author="victor" body="what a cool kid"/>
 // ];
     return (
-        <div className="tophits">
+        <div className="upcoming">
             <Grid           
                 rows={['xxsmall', 'xxsmall', 'xxsmall', 'xxsmall', 'xxsmall']}
                 columns={['medium']}
