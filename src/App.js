@@ -6,7 +6,10 @@ import Layout from './components/layout.js';
 
 function App() {
   return (
-    <div style={{backgroundColor: '#F9FAFB'}}>
+    <div>
+      <style>
+        {'body{background-color: #F9FAFB; }'}
+      </style>
       <Grommet plain>
         <Layout />
         {/*<LayoutRashi />*/}

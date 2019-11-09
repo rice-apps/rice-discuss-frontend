@@ -36,7 +36,7 @@ function sidebar(){
     
     return(
         
-        <div>
+        <div style= {{backgroundColor: '#FFFFFF'}}>
             <Grid           
             rows={['xxsmall', 'small', 'xxsmall', 'medium']}
             columns={['medium']}
@@ -48,20 +48,29 @@ function sidebar(){
             { name: 'upcoming_event_body', start: [0, 3], end: [0, 3] },
             ]}
         >
-            <Box gridArea="top_post_header" background="brand">
+            <Box gridArea="top_post_header">
                 <Text textAlign="start" color="#839CBE" font="Medium Helvetica Neue" size="large" opacity="1">Trending</Text>
             </Box>
-            <Stack gridArea="top_post_body" background="light-3" >
+            {/* <hr
+                style={{
+                    border: "10px black"
+
+                }}
+            /> */}
+            <Stack gridArea="top_post_body" >
                 <Box as={TopHits}/>
             </Stack>
-            <Box gridArea="upcoming_event_header" background="accent-2">
+            <Box gridArea="upcoming_event_header">
                 <Text textAlign="start" color="#839CBE" font="Medium Helvetica Neue" size="large" opacity="1">Upcoming Events</Text>
             </Box>
-            <Stack gridArea="upcoming_event_body" background="accent-1" fill = {true}>
+            <Stack gridArea="upcoming_event_body" fill = {true}>
                 <Box as={Uploads}/>
             </Stack>
             </Grid>
 
+            {/* <style>
+                {'{background-color: red; }'}
+            </style> */}
         </div>
 
     )
