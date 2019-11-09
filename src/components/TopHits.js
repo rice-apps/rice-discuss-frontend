@@ -1,6 +1,6 @@
 import React from 'react';
-import Post from './Post';
-import {Grid, Box, Stack, Text} from 'grommet';
+//import Post from './Post';
+import {Grid, Box, Text} from 'grommet';
 import './empty.css'
 function TopHits () {
 

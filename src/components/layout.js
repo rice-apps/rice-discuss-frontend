@@ -1,6 +1,7 @@
 import React from 'react';
 import {Grid, Stack, Box} from 'grommet';
 import Sidebar from './sidebar';
+import Searchbar from './searchbar';
 //import TopHit from './TopHits';
 //import Uploads from './Uploads';
 
@@ -21,7 +22,10 @@ function Layout (){
                 { name: 'right', start: [2, 1], end: [2, 1] },
                 ]}
             >
-                <Box gridArea="header" background="brand" />
+                <Stack gridArea="header" background="brand" fill = {true}>
+                    <Box as={Searchbar} />
+                </Stack>
+                {/* <Box gridArea="header" background="brand" /> */}
                 <Box gridArea="left" background="light-5" />
                 <Box gridArea="main" background="light-2" />
                 <Stack gridArea="right" background="light-5" fill = {true}>

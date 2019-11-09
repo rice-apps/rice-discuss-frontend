@@ -1,6 +1,6 @@
 import React from 'react';
 import {Grid, Box, Stack, Text} from 'grommet';
-import Post from './Post';
+//import Post from './Post';
 import './empty.css'
 import TopHits from './TopHits';
 import Uploads from './Uploads'
@@ -61,7 +61,7 @@ function sidebar(){
                 <Box as={TopHits}/>
             </Stack>
             <Box gridArea="upcoming_event_header">
-                <Text textAlign="start" color="#839CBE" font="Medium Helvetica Neue" size="large" opacity="1">Upcoming Events</Text>
+                <Text textAlign="start" color="#839CBE" font = "Medium Helvetica Neue" size="large" opacity="1" margin = {{"vertical": "large"}}>Upcoming Events</Text>
             </Box>
             <Stack gridArea="upcoming_event_body" fill = {true}>
                 <Box as={Uploads}/>
