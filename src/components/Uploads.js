@@ -1,7 +1,7 @@
 import React from 'react';
-import Post from './Post';
+//import Post from './Post';
 import './empty.css'
-import {Grid, Box, Stack, Text} from 'grommet';
+import {Grid, Box, Text} from 'grommet';
 
 function Uploads () {
 
