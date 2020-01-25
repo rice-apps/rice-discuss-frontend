@@ -1,22 +1,12 @@
 import React from 'react';
-import {Grommet} from 'grommet';
 import './App.css';
-import Layout from './components/layout.js';
-//import LayoutRashi from './components/LayoutRashi.js';
-
+import './components/button.css';
+import landingPage from './components/assets/login.svg';
 function App() {
   return (
-    <div>
-      <style>
-        {'body{background-color: #F9FAFB; }'}
-      </style>
-      <Grommet plain>
-        <Layout />
-        {/*<LayoutRashi />*/}
-      </Grommet>
+    <div style = {{backgroundImage: `url(${landingPage})`,backgroundSize: `contain`, height: `100%`, backgroundPosition:`center`, backgroundRepeat: `no-repeat`}}>
+    	<button class="button">Sign In</button>
     </div>
-
   );
 }
-
 export default App;
