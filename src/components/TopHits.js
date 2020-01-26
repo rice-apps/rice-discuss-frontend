@@ -1,7 +1,7 @@
 import React from 'react';
 //import Post from './Post';
 import {Grid, Box, Text} from 'grommet';
-import './empty.css'
+import './empty.css';
 function TopHits () {
 
     // const posts = [<Post author="david yi" body="hello"/>,
