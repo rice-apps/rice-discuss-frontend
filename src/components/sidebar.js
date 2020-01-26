@@ -1,9 +1,9 @@
 import React from 'react';
-import {Grid, Box, Stack, Text} from 'grommet';
-//import Post from './Post';
+import {Grid, Box, Stack, Text, Image} from 'grommet';
 import './empty.css'
 import TopHits from './TopHits';
 import Uploads from './Uploads'
+import Trending from './assets/trending.jpg';
 
 
 // function TopHits () {
@@ -48,24 +48,47 @@ function sidebar(){
             { name: 'upcoming_event_body', start: [0, 3], end: [0, 3] },
             ]}
         >
-            <Box gridArea="top_post_header">
-                <Text textAlign="start" color="#839CBE" font="Medium Helvetica Neue" size="large" opacity="1">Trending</Text>
-            </Box>
+        
+        
+            <Stack gridArea = 'top_post_header' anchor = 'top-left'>
+                <Box direction = 'row'>
+                    <Text textAlign="start" color="#839CBE" font="Medium Helvetica Neue" size="large" opacity="1">Trending</Text>
+                 
+                </Box>
+                <Box margin = {{'vertical': '30px'}}>
+                    <hr style = {{width: 350, height: 0}}>
+                    </hr>
+
+                </Box>
+                
+                <Box direction = 'row' margin = {{'horizontal': '90px'}}>
+                    <Image src = {Trending} align = 'center'/>
+                </Box>
+        
+            </Stack>
             {/* <hr
                 style={{
                     border: "10px black"
 
                 }}
             /> */}
-            <Stack gridArea="top_post_body" >
+            <Stack gridArea= 'top_post_body' >
                 <Box as={TopHits}/>
             </Stack>
-            <Box gridArea="upcoming_event_header">
-                <Text textAlign="start" color="#839CBE" font = "Medium Helvetica Neue" size="large" opacity="1" margin = {{"vertical": "large"}}>Upcoming Events</Text>
-            </Box>
-            <Stack gridArea="upcoming_event_body" fill = {true}>
-                <Box as={Uploads}/>
+            <Stack gridArea= 'upcoming_event_header' anchor = 'top-left'>
+                <Box direction = 'row'>
+                    <Text textAlign="start" color="#839CBE" font = "Medium Helvetica Neue" size="large" opacity="1" margin = {{"vertical": "large"}}>Upcoming Events</Text>
+                </Box>
+                <Box margin = {{'vertical': '80px'}}>
+                    <hr style = {{width: 350, height: 0}}>
+                    </hr>
+
+                </Box>
             </Stack>
+            <Box gridArea="upcoming_event_body" margin = {{'vertical': '50px'}} align = 'top-left'>
+                    <Box as={Uploads}/>
+            </Box>
+    
             </Grid>
 
             {/* <style>

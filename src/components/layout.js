@@ -1,9 +1,12 @@
 import React from 'react';
+//import react-bootstrap
 import {Grid, Stack, Box} from 'grommet';
 import Sidebar from './sidebar';
 import Searchbar from './searchbar';
-//import TopHit from './TopHits';
-//import Uploads from './Uploads';
+import Menubar from './menubar';
+//import PostDisplay from './PostDisplay';
+import PostArea from './postarea';
+//import Post from './Post';
 
 function Layout (){
     return (
@@ -11,7 +14,7 @@ function Layout (){
             <Grid           
                 rows={['xxsmall', ['large', 'flex']]}
                 //rows={['1/2', '2/3']}
-                columns={[['xsmall','flex'], ['xlarge','flex'], ['medium', 'flex']]}
+                columns={[['small', 'flex'], ['large', 'flex'], ['medium', 'flex']]}
                 background = "Brand"
                 gap = 'medium'
                 fill = {true}
@@ -23,14 +26,17 @@ function Layout (){
                 ]}
             >
                 <Stack gridArea="header" background="brand" fill = {true}>
-                    <Box as={Searchbar} />
+                    {/* <Box as={Searchbar}/> */}
                 </Stack>
-                {/* <Box gridArea="header" background="brand" /> */}
-                <Box gridArea="left" background="light-5" />
-                <Box gridArea="main" background="light-2" />
-                <Stack gridArea="right" background="light-5" fill = {true}>
-                    <Box as={Sidebar} />
+                <Stack gridArea = "left">
+                    <Box as={Menubar} />                   
                 </Stack>
+                <Stack gridArea="main" background="light-2">
+                    <Box as={PostArea}/>
+                </Stack>
+                { <Stack gridArea="right" background="light-5" fill = {true}>
+                     <Box as={Sidebar} />
+                </Stack>}
             </Grid>
         </div>
 
