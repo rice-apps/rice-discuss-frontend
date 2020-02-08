@@ -8,9 +8,8 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import './components/button.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import LandingPage from './landingPage.js';
-import SignUp from "./signUp.js";
+//import SignUp from "./signUp.js";
 
 function App() {
 	const cas_auth_url = "https://idp.rice.edu/idp/profile/cas/login";
