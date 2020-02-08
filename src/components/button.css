@@ -1,11 +1,19 @@
-.button {
-  border: none;
-  border-radius: 12px;
-  color: #535868;
-  padding: 12px 38px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  margin: 500px 655px;
+.btn {
+  color: black;
+  font-size: 24px;
+  padding: 16px 50px;
   cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #ececec;
+
+}
+
+.btn:hover {
+  background: #e7e7e7;
 }
