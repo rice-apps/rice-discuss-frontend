@@ -17,6 +17,22 @@ function App() {
 	useEffect(() => {
 		const urlParams = new URLSearchParams(window.location.search);
 		const ticket = urlParams.get('ticket');
+
+		if (ticket) {
+			const backend_url = "http://localhost:3001/login";
+
+			const query = {
+				ticket: ticket
+			};
+
+			fetch(backend_url, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json' 
+				},
+				body: JSON.stringify(query),
+			}).then(res => console.log(res));
+		}
 	}, []);
 
 
