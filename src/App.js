@@ -22,16 +22,26 @@ function App() {
 			const backend_url = "http://localhost:3001/login";
 
 			const query = {
-				ticket: ticket
+				ticket: ticket,
+				hello: "hiiiii",
+				p: 1,
 			};
 
 			fetch(backend_url, {
 				method: 'POST',
 				headers: {
-					'Content-Type': 'application/json' 
+					"Content-Type": "application/json"
 				},
-				body: JSON.stringify(query),
-			}).then(res => console.log(res));
+				body: JSON.stringify({
+				ticket: ticket,
+				hello: "hiiiii",
+				p: 1,
+			}),
+			}).then(res => {
+				console.log(res);
+				console.log("hi");
+				return res.json();
+			}).then(response => console.log(response));
 		}
 	}, []);
 
