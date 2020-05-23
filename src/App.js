@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import './components/button.css';
-import LandingPage from './landingPage.js';
+import LandingPage from './LandingPage.js';
 import SignUp from './signUp.js';
 
 function App() {
