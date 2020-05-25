@@ -49,8 +49,8 @@ function App() {
 
 
   return (
-    <div style = {{backgroundImage: `url(${landingPage})`,backgroundSize: `contain`, height: `100%`, backgroundPosition:`center`, backgroundRepeat: `no-repeat`}}>
-    	<a href={url}><button className="button">Sign In</button></a>
+     <div>
+    	<button className="button">Sign In</button>
     </div>
   );
 }
