@@ -8,7 +8,9 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import './components/button.css';
-import landingPage from './components/assets/login.svg';
+import LandingPage from './LandingPage.js';
+import SignUp from './signUp.js';
+
 function App() {
 	const cas_auth_url = "https://idp.rice.edu/idp/profile/cas/login";
 	const service_url = "http://localhost:3000"
